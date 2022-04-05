@@ -1,11 +1,12 @@
 {
   "private": true,
-  "name": "--TODO--",
+  "name": "final-proj",
   "version": "0.0.1",
   "description": "Rakkas.js TypeScript demo project",
   "scripts": {
     "dev": "rakkas dev --open",
     "build": "rakkas build",
+    "build:static": "rakkas build -d static",
     "start": "node dist/server",
     "check": "run-p 'lint:*' typecheck 'test:*'",
     "test": "run-p 'test:*'",
