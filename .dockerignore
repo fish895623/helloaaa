@@ -1,0 +1,6 @@
+dist/
+node_module/
+.idea/
+.vagrant/
+.github/
+package-lock.json

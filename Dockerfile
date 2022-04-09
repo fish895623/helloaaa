@@ -4,13 +4,13 @@ WORKDIR /usr/app
 
 COPY ./package*.json ./
 
-RUN npm install --production
+RUN apk add git
+RUN npm install
+RUN npm install -D esbuild-linux-64@0.14.31
 
 COPY ./ ./
 
 RUN npm run build
-
-EXPOSE 3000
 
 USER node
 
