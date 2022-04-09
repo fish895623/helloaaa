@@ -26,13 +26,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: export to static
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16.14
-      - run: npm install
-      - run: npm run build --export
-
       - name: Install cosign
         if: github.event_name != 'pull_request'
         uses: sigstore/cosign-installer@1e95c1de343b5b0c23352d6417ee3e48d5bcd422
