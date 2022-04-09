@@ -20,7 +20,7 @@ HOST=0.0.0.0 PORT=3000 TRUST_FORWARDED_ORIGIN=1 npm start
 ## Important files and directories
 
 | Path               | Description                                   |
-| ------------------ | --------------------------------------------- |
+|--------------------|-----------------------------------------------|
 | `rakkas.config.ts` | Rakkas configuration                          |
 | `public`           | Static files to be served from `/`            |
 | `src/client.ts`    | Client-side cusomization hooks                |
@@ -34,7 +34,7 @@ HOST=0.0.0.0 PORT=3000 TRUST_FORWARDED_ORIGIN=1 npm start
 Some of them might not be available depending on the features you selected when generating his project.
 
 | Script                     | Description                                             |
-| -------------------------- | ------------------------------------------------------- |
+|----------------------------|---------------------------------------------------------|
 | `npm run dev`              | Start development server on localhost:3000              |
 | `npm run build`            | Build a production server                               |
 | `npm start`                | Start the production server                             |
