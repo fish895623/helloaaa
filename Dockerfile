@@ -1,7 +1,6 @@
 FROM nginx:stable
 
 ARG DEBIAN_FRONTEND=noninteractive
-ENV HOMEPAGE=home
 WORKDIR /usr/app
 
 COPY ./package*.json ./
@@ -15,6 +14,5 @@ RUN npm install -D esbuild-linux-64@0.14.31
 COPY ./ ./
 
 RUN npx rakkas build -d static
-RUN sed 's/location \//location \/${HOMEPAGE}/' /etc/nginx/conf.d/default.conf
-RUN mkdir -p /usr/share/nginx/html/${HOMEPAGE} && \
-    cp -rf dist/* /usr/share/nginx/html/${HOMEPAGE}
+RUN mkdir -p /usr/share/nginx/html && \
+    cp -rf dist/* /usr/share/nginx/html
