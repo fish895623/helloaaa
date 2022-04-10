@@ -15,5 +15,6 @@ RUN npm install -D esbuild-linux-64@0.14.31
 COPY ./ ./
 
 RUN npx rakkas build -d static
+RUN sed 's/location \//location \/a/' /etc/nginx/conf.d/default.conf
 RUN mkdir -p /usr/share/nginx/html && \
     cp -rf dist/* /usr/share/nginx/html
